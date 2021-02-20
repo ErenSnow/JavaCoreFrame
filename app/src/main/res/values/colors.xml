@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorTheme">#0E2947</color>
+    <color name="colorTransparency">#00ffffff</color>
+    <color name="color_sub_title">#99ffffff</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="color_gray">#969697</color>
+    <color name="color_blue">#3583d4</color>
+    <color name="color_blue_press">#499DFC</color>
+    <!--页面背景的颜色-->
+    <color name="color_page_bg">#F6F6F6</color>
+    <color name="color_toolbar_text">#3F3F3F</color>
+    <color name="color_no_wifi_bg">#FAD6DA</color>
+</resources>

@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.kqknuc.kdkuloq"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+
+    // 网络框架Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.adapterRxjava2Version"
+    // okHttp
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingInterceptorVersion"
+    // Json解析
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+    // Fragmentation
+    implementation "me.yokeyword:fragmentationx-core:$rootProject.fragmentationVersion"
+    implementation "me.yokeyword:fragmentationx:$rootProject.fragmentationVersion"
+    implementation "me.yokeyword:fragmentationx-swipeback:$rootProject.fragmentationVersion"
+    // RecyclerView工具
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.BaseRecyclerViewAdapterHelperVersion"
+    // EventBus 发布/订阅事件总线
+    implementation "org.greenrobot:eventbus:$rootProject.eventbusVersion"
+    // 权限框架
+    implementation "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxpermissionsVersion"
+    // Log框架
+    implementation "com.orhanobut:logger:$rootProject.loggerVersion"
+    // 黄油刀
+    implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+    // 屏幕适配
+    implementation "me.jessyan:autosize:$rootProject.autosizeVersion"
+    // TextView
+    implementation "com.github.chenBingX:SuperTextView:$rootProject.SuperTextViewVersion"
+    // 刷新
+    implementation "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.SmartRefreshVersion"
+    implementation "com.scwang.smartrefresh:SmartRefreshHeader:$rootProject.SmartRefreshVersion"
+    // 加载动画
+    implementation "com.wang.avi:library:$rootProject.aviVersion"
+    // Banner
+    implementation "com.youth.banner:banner:$rootProject.bannerVersion"
+    // 公告栏
+    implementation "com.sunfusheng:marqueeview:$rootProject.marqueeVersion"
+    // 圆角图片
+    implementation "com.makeramen:roundedimageview:$rootProject.roundedimageviewVersion"
+    // 页面状态
+    implementation 'com.github.Kennyc1012:MultiStateView:1.3.2'
+    // 处理RxJava生命周期，避免内存泄漏
+    implementation 'com.trello.rxlifecycle3:rxlifecycle:3.1.0'
+    // If you want to bind to Android-specific lifecycles
+    implementation 'com.trello.rxlifecycle3:rxlifecycle-android:3.1.0'
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    implementation 'com.trello.rxlifecycle3:rxlifecycle-components:3.1.0'
+    // 弹窗
+    implementation 'com.lxj:xpopup:2.2.19'
+}

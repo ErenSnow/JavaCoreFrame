@@ -79,7 +79,6 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView,
     private Unbinder unbinder;
     private ActionBar mActionBar;
     private NetworkConnectChangedReceiver mNetworkConnectChangedReceiver;
-    private boolean isNetWork;
 
     @NonNull
     @Override
@@ -118,7 +117,6 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView,
         mNetworkConnectChangedReceiver = new NetworkConnectChangedReceiver();
         registerReceiver(mNetworkConnectChangedReceiver, filter);
         mNetworkConnectChangedReceiver.networkConnectChangedListenerListener(b -> {
-            isNetWork = b;
             if (b) {
                 mLlWifi.setVisibility(View.GONE);
             } else {
